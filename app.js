@@ -1,8 +1,8 @@
-const titles = document.getElementsByClassName('title');
+const bookList = document.querySelector('#book-list');
 
-console.log(Array.isArray(titles));
-console.log(Array.isArray(Array.from(titles)));
+console.log('#book-list next sibling:', bookList.nextSibling);
+console.log('#book-list next element sibling:', bookList.nextElementSibling);
+console.log('#book-list previous sibling:', bookList.previousSibling);
+console.log('#book-list previous element sibling:', bookList.previousElementSibling);
 
-Array.from(titles).forEach(function(title){
-  console.log(title);
-});
+bookList.previousElementSibling.querySelector('p').innerHTML += '<br />Too cool for everyone else!';
